@@ -1,38 +1,171 @@
-.App {
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #059669, #10b981);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
   text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.product-form {
+  background: #1e293b;
+  max-width: 650px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  border: 1px solid #334155;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.product-form h2 {
+  margin-bottom: 1.5rem;
+  color: #10b981;
+  font-size: 1.7rem;
+  font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.product-form input,
+.product-form select {
+  width: 100%;
+  padding: 14px;
+  margin: 0.8rem 0;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #0f172a;
+  color: #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.product-form input:focus,
+.product-form select:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+}
+
+.product-form button {
+  background: #10b981;
+  color: #0f172a;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 14px;
+  width: 100%;
+}
+
+.product-form button:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+.table-container {
+  max-width: 90%;
+  margin: 2rem auto;
+  overflow-x: auto;
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid #334155;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #334155;
+}
+
+.product-table th {
+  background: #0f172a;
+  font-weight: 700;
+  color: #10b981;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.product-table tr:hover {
+  background: #0f172a;
+  transition: background 0.3s;
+}
+
+.action-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: 0.2s;
+}
+
+.edit-btn {
+  background: #3b82f6;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.edit-btn:hover {
+  background: #2563eb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+.save-btn {
+  background: #10b981;
+  color: white;
+}
+.save-btn:hover {
+  background: #059669;
+}
+
+.cancel-btn {
+  background: #9ca3af;
+  color: white;
+}
+.cancel-btn:hover {
+  background: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .product-form {
+    max-width: 90%;
+    padding: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .table-container {
+    padding: 1rem;
+  }
+
+  .navbar {
+    font-size: 1.3rem;
+    padding: 1rem;
   }
 }

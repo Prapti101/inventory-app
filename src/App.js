@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import Auth from "./Auth";
+import Inventory from "./Inventory";
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    document.title = "Inventory Management System";
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {user ? <Inventory user={user} /> : <Auth setUser={setUser} />}
     </div>
   );
 }
