@@ -3,7 +3,6 @@ import { db } from "./firebase";
 import {
     collection,
     addDoc,
-    getDocs,
     deleteDoc,
     doc,
     onSnapshot,
