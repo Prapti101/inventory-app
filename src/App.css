@@ -2,10 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* allows scroll if needed */
+  min-height: 100vh;
   background: #0f172a;
   font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  padding: 1rem; /* keeps spacing from screen edges */
+  padding: 1rem;
   box-sizing: border-box;
 }
 
@@ -15,7 +15,7 @@
   border-radius: 16px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
   width: 100%;
-  max-width: 380px; /* neat size across devices */
+  max-width: 380px;
   text-align: center;
   animation: fadeIn 0.7s ease-in-out;
   border: 1px solid #334155;
@@ -69,7 +69,7 @@
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.2s, background 0.3s;
-  width: 100%; /* full width for all devices */
+  width: 100%;
 }
 
 .signup {
@@ -113,7 +113,7 @@
   }
 }
 
-/* 📱 Small Phones (≤480px) */
+/* 📱 Small Phones */
 @media (max-width: 480px) {
   .auth-card {
     padding: 1.2rem;
@@ -133,7 +133,7 @@
   }
 }
 
-/* 📱 Larger Phones + Tablets Portrait (≤768px) */
+/* 📱 Larger Phones + Tablets Portrait */
 @media (max-width: 768px) {
   .auth-card {
     max-width: 90%;
@@ -144,16 +144,16 @@
   }
 }
 
-/* 💻 Tablets Landscape + Small Laptops (≤1024px) */
+/* 💻 Tablets Landscape + Small Laptops */
 @media (max-width: 1024px) {
   .auth-card {
     max-width: 420px;
   }
 }
 
-/* 🖥️ Large Screens (≥1201px) */
+/* 🖥️ Large Screens */
 @media (min-width: 1201px) {
   .auth-card {
-    max-width: 400px; /* keeps centered and not too wide */
+    max-width: 400px;
   }
 }
