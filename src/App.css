@@ -4,48 +4,46 @@ body {
   background: #0f172a;
   color: #f1f5f9;
 
-  /* ✅ Make everything center vertically + horizontally */
+  /* Make sure content centers but also scrolls if needed */
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
-/* Navbar stays full width */
 .navbar {
   background: linear-gradient(90deg, #059669, #10b981);
   color: white;
-  padding: 1rem 2rem;
-  font-size: 1.6rem;
+  padding: 1rem;
+  font-size: 1.4rem;
   font-weight: 700;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   letter-spacing: 0.6px;
   text-transform: uppercase;
   width: 100%;
+  border-radius: 0 0 12px 12px;
 }
 
 .product-form {
   background: #1e293b;
-  max-width: 500px;   /* ✅ slightly smaller for balance */
   width: 100%;
-  margin: 2rem auto;
-  padding: 2rem;
+  max-width: 480px;   /* keeps it neat on desktop */
+  margin: 1.5rem auto;
+  padding: 1.5rem;
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
   text-align: center;
   border: 1px solid #334155;
-
-  /* ✅ Center box on page */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  box-sizing: border-box;
 }
 
 .product-form h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   color: #10b981;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -53,13 +51,14 @@ body {
 .product-form select {
   width: 100%;
   padding: 14px;
-  margin: 0.8rem 0;
+  margin: 0.6rem 0;
   border: 1px solid #334155;
   border-radius: 12px;
   font-size: 1rem;
   background: #0f172a;
   color: #f1f5f9;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .product-form input:focus,
@@ -72,14 +71,14 @@ body {
 .product-form button {
   background: #10b981;
   color: #0f172a;
-  padding: 14px 20px;
+  padding: 14px;
   border: none;
   border-radius: 12px;
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 14px;
+  margin-top: 12px;
   width: 100%;
 }
 
@@ -89,24 +88,27 @@ body {
 }
 
 .table-container {
-  max-width: 90%;
-  margin: 2rem auto;
-  overflow-x: auto;
+  width: 100%;
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  overflow-x: auto;   /* ✅ allows scroll on mobile */
   background: #1e293b;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
   border: 1px solid #334155;
+  box-sizing: border-box;
 }
 
 .product-table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 500px; /* ✅ avoids text squeezing too much */
 }
 
 .product-table th,
 .product-table td {
-  padding: 14px 16px;
+  padding: 12px;
   text-align: left;
   border-bottom: 1px solid #334155;
 }
@@ -116,7 +118,7 @@ body {
   font-weight: 700;
   color: #10b981;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: 0.5px;
 }
 
@@ -126,13 +128,13 @@ body {
 }
 
 .action-btn {
-  padding: 8px 14px;
+  padding: 8px 12px;
   border: none;
   border-radius: 10px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
-  margin-right: 8px;
+  margin-right: 6px;
   transition: 0.2s;
 }
 
@@ -168,18 +170,30 @@ body {
   background: #6b7280;
 }
 
+/* ✅ Mobile-first adjustments */
 @media (max-width: 768px) {
+  .navbar {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+
   .product-form {
-    max-width: 90%;
-    padding: 1.5rem;
+    padding: 1rem;
+    max-width: 95%;
+  }
+
+  .product-form h2 {
+    font-size: 1.3rem;
   }
 
   .table-container {
-    padding: 1rem;
+    padding: 0.8rem;
+    max-width: 100%;
   }
 
-  .navbar {
-    font-size: 1.3rem;
-    padding: 1rem;
+  .product-table th,
+  .product-table td {
+    font-size: 0.85rem;
+    padding: 10px;
   }
 }
